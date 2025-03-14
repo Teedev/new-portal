@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Successful</title>
+
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        .btn {
+            display: block;
+            width: 80%;
+            padding: 15px;
+            margin: 10px auto;
+            font-size: 18px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-vault {
+            background-color: #007BFF;
+        }
+        .btn-land {
+            background-color: #28A745;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+         .passport-box {
+            width: 100%;
+            height: 200px;
+            border: 2px dashed #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="{% static 'arm.jpg' %}" alt="Nigeria Coat of Arms" width="80">
+        <h2 class="text-primary">MANGU LGC</h2>
+
+    <h2>OWNED LANDED PROPERTIES VAULT Uploaded Successfully!</h2>
+
+
+ <button class="btn btn-land" onclick="location.href='{% url 'property_form' %}'">Upload Another OWNED LANDED PROPERTIES VAULT</button>
+
+       </div>
+</body>
+</html>

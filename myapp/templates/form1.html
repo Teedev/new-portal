@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangu LGC Vault</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .passport-box {
+            width: 100%;
+            height: 200px;
+            border: 2px dashed #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .text-left {
+    text-align: left !important;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <img src="{% static 'arm.jpg' %}" alt="Nigeria Coat of Arms" width="80">
+        <h2 class="text-primary">MANGU LGC</h2>
+        <h5 class="text-secondary">OWNED LANDED PROPERTIES VAULT</h5>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+             <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+<!--            <div class="mb-3">-->
+<!--                <input type="text" class="form-control" name="property_no" placeholder="Property NO" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <input type="text" class="form-control" name="coordinate" placeholder="Co-ordinate of Property" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <input type="text" class="form-control" name="location" placeholder="Location" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <input type="text" class="form-control" name="cost" placeholder="Cost" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <select class="form-control" name="property_type" required>-->
+<!--                    <option value="">Type of Property</option>-->
+<!--                    <option value="Residential">Residential</option>-->
+<!--                    <option value="Commercial">Commercial</option>-->
+<!--                    <option value="Industrial">Industrial</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+
+<!--            <div class="passport-box" onclick="document.getElementById('passportInput').click();">-->
+<!--                <input type="file" id="passportInput" name="passport" accept="image/*" required>-->
+<!--&lt;!&ndash;                <p>Click to select Passport</p>&ndash;&gt;-->
+<!--            </div>-->
+            <button type="submit" class="btn btn-primary w-100 mt-3">Save</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
